@@ -1,3 +1,5 @@
+"""Assumes pre processed data with no missing values"""
+
 import numpy as np
 from dataclasses import dataclass
 from typing import Any, Optional
@@ -138,3 +140,7 @@ class DecisionTree:
         X = np.array(X)
         predictions = [self._traverse_tree(x, self.root) for x in X]
         return np.array(predictions)
+    
+
+"""=============================================================================="""
+"""post pruning and handling missing values to be implemented later"""
